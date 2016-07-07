@@ -1,4 +1,4 @@
-package com.example.accuratecare.accuratecare.Session;
+package com.example.accuratecare.accuratecare.infra;
 
 
 import com.example.accuratecare.accuratecare.dominio.Patient;
@@ -16,16 +16,16 @@ public class UserSession {
         return loggedPatient;
     }
 
-    public void setPessoaLogada(Patient pessoa) {
-        this.loggedPatient = pessoa;
+    public void setLoggedPatient(Patient patient) {
+        this.loggedPatient = patient;
     }
 
-    public void setUsuarioLogado(User usuario) {
-        this.loggedUser = usuario;
+    public void setLoggedUser(User user) {
+        this.loggedUser = user;
     }
 
     public void invalidateSession(){
-        this.setUsuarioLogado(null);
-        this.setPessoaLogada(null);
+        this.setLoggedUser(null);
+        this.setLoggedPatient(null);
     }
 }

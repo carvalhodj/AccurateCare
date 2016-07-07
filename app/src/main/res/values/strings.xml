@@ -6,7 +6,7 @@
     <string name="login_edt_password">Password</string>
     <string name="login_btn_sign_in">Sign In</string>
     <string name="login_btn_sign_up">Sign Up</string>
-
+    <string name="login_error">Error trying to login</string>
 
                 <!--SignUp Screen-->
     <string name="sign_up_edt_age">Age</string>

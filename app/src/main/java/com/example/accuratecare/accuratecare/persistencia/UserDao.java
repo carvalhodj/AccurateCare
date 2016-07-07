@@ -58,9 +58,52 @@ public class UserDao {
         return user;
     }
 
+    public User searchUser(String email, String password){
+        SQLiteDatabase db;
+        db = databaseHelper.getReadableDatabase();
 
+        User user = null;
 
+        Cursor cursor = db.rawQuery("SELECT * FROM "+DatabaseHelper.USER_TABLE+
+                " WHERE "+DatabaseHelper.USER_EMAIL+" =? AND "+DatabaseHelper.USER_PASSWORD+" =?", new String[]{email, password});
+        if (cursor.moveToFirst()){
+            user = createUser(cursor);
+        }
+        db.close();
+        cursor.close();
+        return user;
+    }
 
+    public User searchUserEmail(String email){
+        SQLiteDatabase db;
+        User user = null;
+
+        db = databaseHelper.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM " + DatabaseHelper.USER_TABLE +
+                " WHERE " + DatabaseHelper.USER_EMAIL + " =?", new String[]{email});
+        if (cursor.moveToFirst()){
+            user = createUser(cursor);
+        }
+        db.close();
+        cursor.close();
+        return user;
+
+    }
+
+    public Patient searchPatientId(int id){
+        Patient patient = null;
+        SQLiteDatabase db = databaseHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+databaseHelper.PATIENT_TABLE+" WHERE "+
+                databaseHelper.PATIENT_ID+" =?", new String[]{String.valueOf(id)});
+        if (cursor.moveToFirst()){
+            patient = createPatient(cursor);
+        }
+        db.close();
+        cursor.close();
+
+        return patient;
+    }
 
 
 
