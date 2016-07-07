@@ -6,10 +6,10 @@ public class User {
     private String email;
     private String password;
 
-    public User(String login, String password) {
-        this.email = login;
+    /*public User(String email, String password) {
+        this.email = email;
         this.password = password;
-    }
+    }*/
 
     public int getId() {
         return id;
@@ -19,11 +19,11 @@ public class User {
         this.id = id;
     }
 
-    public String getLogin() {
+    public String getEmail() {
         return email;
     }
 
-    public void setLogin(String login) {
+    public void setEmail(String login) {
         this.email = login;
     }
 

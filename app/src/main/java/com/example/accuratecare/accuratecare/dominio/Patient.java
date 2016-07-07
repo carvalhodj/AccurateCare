@@ -5,17 +5,16 @@ public class Patient {
     private int id;
     private String name;
     private int age;
-
     private long weight;
 
     private User user;
 
-    public Patient(String name, int age, String email, long weight, User user) {
+    /*public Patient(String name, int age, String email, long weight, User user) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.user = user;
-    }
+    }*/
 
     public User getUser() {
         return user;
