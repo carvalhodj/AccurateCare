@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">AccurateCare</string>
+
+                <!--Login Screen-->
+    <string name="login_edt_email">Email</string>
+    <string name="login_edt_password">Password</string>
+    <string name="login_btn_sign_in">Sign In</string>
+    <string name="login_btn_sign_up">Sign Up</string>
+
+
+                <!--SignUp Screen-->
+    <string name="sign_up_edt_age">Age</string>
+    <string name="sign_up_edt_name">Name</string>
+    <string name="sign_up_edt_email">Email</string>
+    <string name="sign_up_edt_weight">Weight</string>
+    <string name="sign_up_edt_password">Password</string>
+    <string name="sign_up_edt_confirm_password">Confirm the Password</string>
+    <string name="sign_up_txt_years">years</string>
+    <string name="sign_up_txt_kilogram">kg</string>
+    <string name="sign_up_btn_sign_up">Sign Up</string>
+
 </resources>
