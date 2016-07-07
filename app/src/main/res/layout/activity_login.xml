@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:contentDescription="descrição"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/logo"/>-->
+
+
+        <EditText android:id="@+id/login_userEmail"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/login_edt_email"/>
+
+
+
+        <EditText android:id="@+id/login_userPassword"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/login_edt_password"/>
+
+
+        <Button
+            android:id="@+id/btn_login_signIn"
+            android:text="@string/login_btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userPassword"
+            android:layout_alignStart="@+id/userPassword"
+            android:layout_alignEnd="@+id/userPassword"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:onClick="login"/>
+
+        <Button
+            android:id="@+id/btn_login_signUp"
+            android:text="@string/login_btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/darker_gray"
+            android:background="@android:color/transparent"
+            android:tint="@null"
+            android:elegantTextHeight="false"
+            android:focusable="false"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:onClick="startSignUpActivity"/>
+
+    </LinearLayout>
+</ScrollView>
